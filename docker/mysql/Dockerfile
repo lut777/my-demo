@@ -1,4 +1,5 @@
-FROM mysql:5.7.18
+# FROM mysql:5.7.18
+mysql:8.0.31
 
 ENV LANG=C.UTF-8
 # Database Initialization: Put the *.sql、*.sh scrips into /docker-entrypoint-initdb.d/ directory

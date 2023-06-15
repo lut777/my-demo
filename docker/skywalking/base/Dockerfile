@@ -2,7 +2,8 @@ FROM mydemo/openjdk:8-jre-alpine AS build
 
 WORKDIR /home
 # Download SkyWalking
-RUN curl -fL -o ./skywalking.tar.gz http://mirror.bit.edu.cn/apache/skywalking/6.6.0/apache-skywalking-apm-6.6.0.tar.gz \
+# RUN curl -fL -o ./skywalking.tar.gz http://mirror.bit.edu.cn/apache/skywalking/6.6.0/apache-skywalking-apm-6.6.0.tar.gz \
+RUN curl -fL -o ./skywalking.tar.gz https://archive.apache.org/dist/skywalking/6.6.0/apache-skywalking-apm-6.6.0.tar.gz \
 	&& tar xzf skywalking.tar.gz -C ./ \
 	&& rm -rf skywalking.tar.gz \
 	&& mv apache-skywalking-apm-bin skywalking \

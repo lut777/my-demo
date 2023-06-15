@@ -1,7 +1,8 @@
 FROM mydemo/openjdk:8-jre-alpine
 
 # Download ShardingProxy
-RUN curl -fL -o /home/shardingproxy.tar.gz http://mirrors.tuna.tsinghua.edu.cn/apache/incubator/shardingsphere/4.0.0-RC3/apache-shardingsphere-incubating-4.0.0-RC3-sharding-proxy-bin.tar.gz \
+# RUN curl -fL -o /home/shardingproxy.tar.gz http://mirrors.tuna.tsinghua.edu.cn/apache/incubator/shardingsphere/4.0.0-RC3/apache-shardingsphere-incubating-4.0.0-RC3-sharding-proxy-bin.tar.gz \
+RUN curl -fL -o /home/shardingproxy.tar.gz https://archive.apache.org/dist/incubator/shardingsphere/4.0.0-RC3/apache-shardingsphere-incubating-4.0.0-RC3-sharding-proxy-bin.tar.gz \
 	&& tar xzf /home/shardingproxy.tar.gz -C /home/ \
 	&& rm -rf /home/shardingproxy.tar.gz \
 	&& mv /home/apache-shardingsphere-incubating-4.0.0-RC3-sharding-proxy-bin /home/shardingproxy \
